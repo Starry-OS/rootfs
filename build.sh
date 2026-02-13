@@ -2,8 +2,8 @@ ARCH=${ARCH:-riscv64}
 IMG_SIZE=${IMG_SIZE:-1G}
 
 # BASE=https://dl-cdn.alpinelinux.org/alpine
-BASE=https://mirrors.tuna.tsinghua.edu.cn/alpine
-REL=v3.22
+BASE=https://mirrors.cernet.edu.cn/alpine
+REL=v3.23
 URL=${BASE}/${REL}/releases/${ARCH}
 
 eval $(curl -sS -L ${URL}/latest-releases.yaml | yq -o=shell '.[] | select(.flavor == "alpine-minirootfs")')
